@@ -1,0 +1,5 @@
+{
+  "CUDA_LIBRARY_DIR": "/usr/local/cuda/lib64",
+  "DATA_ROOT": "/path/to/where/to/store/data/",
+  "SHAPENET_ROOT": "/path/to/shapenet/dataset"
+}
