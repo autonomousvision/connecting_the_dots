@@ -4,7 +4,7 @@
 
 This repository contains the code for the paper
 
-**[Connecting the Dots: Learning Representations for Active Monocular Depth Estimation](TODO)**
+**[Connecting the Dots: Learning Representations for Active Monocular Depth Estimation](http://www.cvlibs.net/publications/Riegler2019CVPR.pdf)**
 <br>
 [Gernot Riegler](https://griegler.github.io/), [Yiyi Liao](https://yiyiliao.github.io/), [Simon Donne](https://avg.is.tuebingen.mpg.de/person/sdonne), [Vladlen Koltun](http://vladlen.info/), and [Andreas Geiger](http://www.cvlibs.net/)
 <br>
