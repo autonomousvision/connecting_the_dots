@@ -21,7 +21,6 @@ clean:
 	rm render/*.o
 
 pyrender: $(PYRENDER_DEPENDENCIES)
-	cd pyrender; \
 	python setup.py build_ext --inplace
 
 %.c.o: %.c
