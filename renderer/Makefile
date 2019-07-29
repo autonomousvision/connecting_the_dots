@@ -19,6 +19,9 @@ all: pyrender
 
 clean:
 	rm render/*.o
+	rm cyrender.cpp
+	rm ./*.so
+	rm -rf ./build/
 
 pyrender: $(PYRENDER_DEPENDENCIES)
 	python setup.py build_ext --inplace
