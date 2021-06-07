@@ -4,7 +4,7 @@ C_FLAGS = -O3 -msse -msse2 -msse3 -msse4.2 -fPIC -Wall
 CXX = g++ -c
 CXX_FLAGS = -O3 -std=c++11 -msse -msse2 -msse3 -msse4.2 -fPIC -Wall
 CUDA = nvcc -c
-CUDA_FLAGS = -x cu -Xcompiler -fPIC -arch=sm_30 -std=c++11 --expt-extended-lambda
+CUDA_FLAGS = -x cu -Xcompiler -fPIC -std=c++11 --expt-extended-lambda
 
 
 PYRENDER_DEPENDENCIES = setup.py \

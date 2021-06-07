@@ -32,6 +32,7 @@ The network training/evaluation code is based on `Pytorch`.
 PyTorch>=1.1
 Cuda>=10.0
 ```
+Updated on 07.06.2021: The code is now compatible with the latest Pytorch version (1.8).
 
 The other python packages can be installed with `anaconda`:
 ```
@@ -65,11 +66,12 @@ python setup.py build_ext --inplace
 ## Running
 
 
-### Creating synthetic data
+### Creating Synthetic Data
 To create synthetic data and save it locally, download [ShapeNet V2](https://www.shapenet.org/) and correct `SHAPENET_ROOT` in `config.json`. Then the data can be generated and saved to `DATA_ROOT` in `config.json` by running
 ```
 ./create_syn_data.sh
 ```
+If you are only interested in evaluating our pre-trained model, [here (3.7G)](https://s3.eu-central-1.amazonaws.com/avg-projects/connecting_the_dots/val_data.zip) is a validation set that contains a small amount of images.
 
 ### Training Network
 
@@ -90,6 +92,15 @@ To evaluate a specific checkpoint, e.g. the 50th epoch, one can run
 python train_val.py --cmd retest --epoch 50
 ```
 
+### Evaluating a Pre-trained Model
+We provide a model pre-trained using the photometric loss. Once you have prepared the synthetic dataset and changed `DATA_ROOT` in `config.json`, the pre-trained model can be evaluated on the validation set by running:
+```
+mkdir -p output
+mkdir -p output/exp_syn
+wget -O output/exp_syn/net_0099.params https://s3.eu-central-1.amazonaws.com/avg-projects/connecting_the_dots/net_0099.params
+python train_val.py --cmd retest --epoch 99
+```
+You can also download our validation set from [here (3.7G)](https://s3.eu-central-1.amazonaws.com/avg-projects/connecting_the_dots/val_data.zip).
 
 ## Acknowledgement 
 This work was supported by the Intel Network on Intelligent Systems.

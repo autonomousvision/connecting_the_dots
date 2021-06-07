@@ -8,9 +8,6 @@ include_dirs = [
 ]
 
 nvcc_args = [
-  '-arch=sm_30',
-  '-gencode=arch=compute_30,code=sm_30',
-  '-gencode=arch=compute_35,code=sm_35',
 ]
 
 setup(
